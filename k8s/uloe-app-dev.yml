@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: uloe-server
-        image: bluejay820/uloe-server:0.0.3
+        image: bluejay820/uloe-server:0.0.5
         imagePullPolicy: "Always"
         securityContext:
           readOnlyRootFilesystem: true
