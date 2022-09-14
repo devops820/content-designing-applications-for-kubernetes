@@ -70,4 +70,5 @@ var server = app.listen(port, function () {
 
 log = function(data) {
   fs.appendFileSync('logs/uloe.log', data + "\n");
+  console.log(data);
 }
