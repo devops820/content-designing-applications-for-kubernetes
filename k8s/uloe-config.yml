@@ -6,7 +6,7 @@ data:
   mongodb.host: "uloe-mongodb"
   mongodb.port: "27017"
   .env: |
-    REACT_APP_API_PORT="3001"
+    REACT_APP_API_PORT="30081"
 ---
 apiVersion: v1
 kind: Secret
