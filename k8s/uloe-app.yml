@@ -36,8 +36,15 @@ spec:
     spec:
       containers:
       - name: uloe-server
-        image: bluejay820/uloe-server:0.0.1
+        image: bluejay820/uloe-server:0.0.3
         imagePullPolicy: "Always"
+        securityContext:
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - name: added-items-log
+          mountPath: /usr/src/app/logs
+          subPath: logs
+          readOnly: false
         ports:
         - name: web
           containerPort: 3001
@@ -82,3 +89,5 @@ spec:
           items:
           - key: .env
             path: .env
+      - name: added-items-log
+        emptyDir: {}
