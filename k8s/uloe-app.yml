@@ -41,7 +41,7 @@ spec:
         securityContext:
           readOnlyRootFilesystem: true
         volumeMounts:
-        - name: added-items-log
+        - name: logs 
           mountPath: /usr/src/app/logs
           subPath: logs
           readOnly: false
@@ -89,5 +89,5 @@ spec:
           items:
           - key: .env
             path: .env
-      - name: added-items-log
+      - name: logs 
         emptyDir: {}
