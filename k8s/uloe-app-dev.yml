@@ -9,13 +9,13 @@ spec:
   ports:
   - name: frontend
     protocol: TCP
-    port: 30080
-    nodePort: 30080
+    port: 30082
+    nodePort: 30082
     targetPort: 3000
   - name: server
     protocol: TCP
-    port: 30081
-    nodePort: 30081
+    port: 30083
+    nodePort: 30083
     targetPort: 3001
 
 ---
@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: uloe-server
-        image: bluejay820/uloe-server:0.0.4
+        image: bluejay820/uloe-server:0.0.3
         imagePullPolicy: "Always"
         securityContext:
           readOnlyRootFilesystem: true
